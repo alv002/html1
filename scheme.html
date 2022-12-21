@@ -3,16 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>学习强国跳转页面</title>
-    <script src="qrcode.js"></script>
-    <meta content=”width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;” name=”viewport” >
+    <script src="js/qrcode.js"></script>
     <style>
+        *{
+            text-align: center;
+        }
         .wx{
-            font-size: 30px;
+            font-size: 35px;
             color: red;
         }
     </style>
 </head>
 <body>
+    <h1>请使用学习强国app扫描下方二维码</h1>
+    <h2>扫描后点击登录网页</h2>
+    <h2>回到公众号回复“3”开始学习</h2>
 <div>
     <button><a id="login" href="#"><h1>点击登录跳转学习强国APP</h1></a></button>
 </div>
@@ -24,7 +29,7 @@
 <script>
     function load() {
         if (isWechat()){
-            document.getElementById("wx").innerText = "当前为微信环境，请点击右上角浏览器中打开"
+            document.getElementById("wx").innerText = "当前为微信环境无法直接跳转\r\n请点击右上角三个点\r\n使用默认浏览器打开可直接跳转\r\n这样就不用保存二维码了"
         }
         let search = window.location.search
         search = search.substring(1,search.length)
